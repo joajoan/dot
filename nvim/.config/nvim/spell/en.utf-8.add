@@ -2,8 +2,6 @@ nvim
 treesitter
 lua
 sql
-lualine
-devicons
 dracula
 filetype
 sqitch
@@ -12,3 +10,17 @@ rebase
 Sqitch's
 NeoVim
 config
+Databricks
+Args
+args
+kwargs
+dbutils
+KeyError
+JSON
+deserialize
+deserialized
+MongoDB
+ETL
+ValueError
+databricks
+YAML
