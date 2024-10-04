@@ -15,4 +15,5 @@ vim.wo.relativenumber = true
 vim.o.showmode = false
 vim.opt.spell = true
 vim.opt.spelllang = {'en_us'}
+vim.o.smartindent = true
 require("lazy").setup("plugins")
