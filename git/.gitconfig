@@ -1,0 +1,13 @@
+[alias]
+	st = status
+	c = commit
+	b = branch
+	co = checkout
+	r = rebase
+	a = add
+[push]
+	default = current
+[core]
+	editor = nvim -f
+[pull]
+	rebase = true
