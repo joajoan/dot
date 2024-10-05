@@ -3,20 +3,25 @@ return {
   build = ":TSUpdate",
   config = function()
     require("nvim-treesitter.configs").setup({
-      ensure_installed = { 
-	"lua", 
-	"python", 
-	"sql", 
-	"rust", 
-      },  
+      ensure_installed = {
+        "git_config",
+        "git_rebase",
+        "gitattributes",
+        "gitcommit",
+        "gitignore",
+        "lua",
+        "python",
+        "sql",
+        "rust",
+      },
       sync_install = false,
-      auto_install = true,  
+      auto_install = true,
       highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
       },
       spell = {
-        enable = true,  
+        enable = true,
       },
       indent = {
         enable = true,
