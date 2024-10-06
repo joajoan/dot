@@ -5,7 +5,7 @@ return {
     linters_by_ft = {
       python = { "flake8" },
       sql = { "sqlfluff" },
-      rust = { "clippy" }
+      rust = { "clippy" },
     }
   },
   config = function(_, opts)

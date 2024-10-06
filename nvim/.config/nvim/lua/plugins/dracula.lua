@@ -1,10 +1,10 @@
-return { 
+return {
   "Mofiqul/dracula.nvim",
   name="dracula",
   priority=1000,
   config = function()
     require("dracula").setup({
-      colors = { 
+      colors = {
         bg = "#000000",
       },
       overrides = {

@@ -20,12 +20,8 @@ return {
         enable = true,
         additional_vim_regex_highlighting = false,
       },
-      spell = {
-        enable = true,
-      },
-      indent = {
-        enable = true,
-      },
+      spell = { enable = true },
+      indent = { enable = true },
       incremental_selection = {
         enable = true,
         keymaps = {
