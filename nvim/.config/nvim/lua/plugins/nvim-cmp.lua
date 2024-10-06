@@ -7,16 +7,17 @@ return {
     "hrsh7th/cmp-cmdline",
     "saadparwaiz1/cmp_luasnip",
     "L3MON4D3/LuaSnip",
+    "rafamadriz/friendly-snippets",
   },
   config = function()
     local cmp = require("cmp")
     local luasnip = require("luasnip")
-
+    require("luasnip.loaders.from_vscode").lazy_load()
     cmp.setup({
       snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
-        end,
+        end
       },
       mapping = {
         ["<Tab>"] = cmp.mapping.select_next_item(),
@@ -31,16 +32,16 @@ return {
         { name = "nvim_lsp" },
         { name = "luasnip" },
       }, {
-          { name = "buffer" },
-          { name = "path" },
-        }),
+        { name = "buffer" },
+        { name = "path" },
+      }),
     })
     cmp.setup.cmdline(":", {
       sources = cmp.config.sources({
         { name = "path" },
       }, {
-          { name = "cmdline" },
-        }),
+        { name = "cmdline" },
+      }),
     })
   end,
 }
