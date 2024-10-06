@@ -19,7 +19,7 @@ return {
           luasnip.lsp_expand(args.body)
         end
       },
-      mapping = {
+      mapping = cmp.mapping.preset.insert({
         ["<Tab>"] = cmp.mapping.select_next_item(),
         ["<S-Tab>"] = cmp.mapping.select_prev_item(),
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -27,10 +27,10 @@ return {
         ["<C-Space>"] = cmp.mapping.complete(),
         ["<C-e>"] = cmp.mapping.close(),
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
-      },
+      }),
       sources = cmp.config.sources({
-        { name = "nvim_lsp" },
-        { name = "luasnip" },
+        { name = "nvim_lsp", keyword_length = 0 },
+        { name = "luasnip", keyword_length = 0 },
       }, {
         { name = "buffer" },
         { name = "path" },
