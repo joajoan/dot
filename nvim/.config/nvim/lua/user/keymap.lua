@@ -1,4 +1,4 @@
--- Disable non-interactive execution. 
+-- Disable non-interactive execution.
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Move visual selection on navigation.
@@ -27,8 +27,14 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set({"n", "v"}, "<leader>p", [["+p]])
 
--- Delete into void register. 
+-- Delete into void register.
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- Replace visual selection.
 vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- Diagnostics.
+vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end)
+vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end)
+vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end)
+
