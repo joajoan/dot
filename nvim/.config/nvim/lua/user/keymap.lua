@@ -38,3 +38,5 @@ vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end)
 vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end)
 vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end)
 
+-- Equate cancel to escape.
+vim.keymap.set("i", "<C-c>", "<Esc>")
