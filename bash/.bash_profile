@@ -3,3 +3,4 @@ if [ -f ~/.bashrc ]; then
 fi
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
+export COLORTERM=truecolor
