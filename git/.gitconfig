@@ -11,3 +11,5 @@
 	editor = nvim -f
 [pull]
 	rebase = true
+[init]
+	defautlBranch = master
