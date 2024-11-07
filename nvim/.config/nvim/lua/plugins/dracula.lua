@@ -4,14 +4,7 @@ return {
   priority=1000,
   config = function()
     require("dracula").setup({
-      colors = {
-        bg = "#000000",
-      },
-      overrides = {
-	LazyNormal = { -- LazyBackdrop: alt. for brighten backdrop
-	  bg = "#21222C",
-        },
-      },
+      colors = { bg = "#000000" },
     })
     vim.cmd("colorscheme dracula")
   end
