@@ -40,6 +40,11 @@ local function create_theme(colors)
   }
 end
 
+local function location()
+  local cursor = vim.api.nvim_win_get_cursor(0)
+  return string.format('%d:%d', cursor[1], cursor[2] + 1)
+end
+
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = {
@@ -53,17 +58,16 @@ return {
         theme = theme,
         component_separators = '',
         section_separators = { left = '', right = '' },
+        always_divide_middle = true,
       },
       sections = {
-        lualine_a = { { 'mode', separator = { left = '', right = ''}, right_padding = 2 } },
+        lualine_a = { { 'mode', separator = { left = '', right = ''} } },
         lualine_b = { 'branch', 'filename' },
-        lualine_c = {
-          '%=', --[[ add your center compoentnts here in place of this comment ]]
-        },
+        lualine_c = {},
         lualine_x = {},
         lualine_y = { 'filetype', 'progress' },
         lualine_z = {
-          { 'location', separator = { left = '', right = '' }, left_padding = 2 },
+          { location, separator = { left = '', right = '' } },
         },
       },
       inactive_sections = {
