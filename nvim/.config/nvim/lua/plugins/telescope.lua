@@ -13,7 +13,6 @@ return {
         mappings = {
           n = { ["<C-c>"] = actions.close },
           i = {
-            ["<C-c>"] = false,
             ["<C-j>"] = actions.move_selection_next,
             ["<C-k>"] = actions.move_selection_previous,
           },
