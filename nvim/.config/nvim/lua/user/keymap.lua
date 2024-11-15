@@ -35,8 +35,12 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Diagnostics.
 vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float)
-vim.keymap.set("n", "[d", vim.diagnostic.goto_next)
-vim.keymap.set("n", "]d", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 
 -- Equate cancel to escape.
 vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- Insert new line without mode change.
+vim.api.nvim_set_keymap('n', 'oo', 'o<Esc>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'OO', 'O<Esc>', { noremap = true, silent = true })
