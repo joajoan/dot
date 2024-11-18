@@ -5,6 +5,8 @@ fi
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export COLORTERM=truecolor
 
-source "$HOME/.cargo/env"
+if [ -f  "$HOME/.cargo/env" ]; then
+    source "$HOME/.cargo/env"
+fi
 
 alias sudo="sudo env PATH=$PATH"
