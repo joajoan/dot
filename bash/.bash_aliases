@@ -4,3 +4,4 @@ alias pip=pip3
 
 # Databricks
 alias dbs=databricks
+alias dab="databricks bundle"
