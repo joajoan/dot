@@ -8,5 +8,3 @@ export COLORTERM=truecolor
 if [ -f  "$HOME/.cargo/env" ]; then
     source "$HOME/.cargo/env"
 fi
-
-alias sudo="sudo env PATH=$PATH"
