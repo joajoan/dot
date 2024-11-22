@@ -56,3 +56,6 @@ vim.g.netrw_winsize = 25
 vim.diagnostic.config({
   float = {border = "rounded"},
 })
+
+-- Disable startup message.
+vim.opt.shortmess:append("I")
