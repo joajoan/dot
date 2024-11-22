@@ -11,5 +11,14 @@ return {
         }
       }
     })
+    -- lspconfig.ruff.setup({})
+    lspconfig.pyright.setup({
+      settings = {
+        pyright = { disableOrganizeImports = true },
+        python = {
+          analysis = { "*" },
+        }
+      },
+    })
   end,
 }
