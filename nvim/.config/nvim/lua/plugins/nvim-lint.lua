@@ -5,7 +5,6 @@ return {
     linters_by_ft = {
       python = { "ruff" },
       sql = { "sqlfluff" },
-      rust = { "clippy" },
     }
   },
   config = function(_, opts)
