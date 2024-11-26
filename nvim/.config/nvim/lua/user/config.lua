@@ -52,10 +52,18 @@ vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 
--- Rounded Borders.
+-- Rounded borders.
 vim.diagnostic.config({
   float = {border = "rounded"},
 })
 
 -- Disable startup message.
 vim.opt.shortmess:append("I")
+
+-- Rounded LSP borders.
+local open_floating_preview = vim.lsp.util.open_floating_preview
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+  opts = opts or {}
+  opts.border = opts.border or "rounded"
+  return open_floating_preview(contents, syntax, opts, ...)
+end
