@@ -39,7 +39,7 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 
 -- Equate cancel to escape.
-vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set({"i", "n"}, "<C-c>", "<Esc>")
 
 -- Insert new line without mode change.
 vim.api.nvim_set_keymap('n', 'o', 'o<Esc>', { noremap = true, silent = true })
