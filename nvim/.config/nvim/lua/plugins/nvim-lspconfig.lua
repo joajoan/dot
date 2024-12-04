@@ -24,7 +24,7 @@ return {
       settings = {
         pyright = { disableOrganizeImports = true },
         python = {
-          analysis = { "*" },
+          analysis = { typeCheckingMode = "off" },
         }
       },
     })
