@@ -67,3 +67,6 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   opts.border = opts.border or "rounded"
   return open_floating_preview(contents, syntax, opts, ...)
 end
+
+-- Disable OmniSQL default mappings.
+vim.g.omni_sql_no_default_maps = true
