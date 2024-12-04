@@ -9,7 +9,7 @@ return {
     local actions = require("telescope.actions")
     telescope.setup({
       defaults = {
-        file_ignore_patterns = { ".git" },
+        file_ignore_patterns = { "%.git/" },
         mappings = {
           n = { ["<C-c>"] = actions.close },
           i = {
