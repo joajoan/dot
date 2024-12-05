@@ -1,10 +1,10 @@
 [alias]
-	st = status
-	c = commit
-	b = branch
-	co = checkout
-	r = rebase
 	a = add
+	b = branch
+	c = commit
+    co = checkout
+	st = status
+	r = rebase
 [push]
 	default = current
 [core]
