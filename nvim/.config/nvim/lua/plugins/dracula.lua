@@ -5,6 +5,11 @@ return {
   config = function()
     require("dracula").setup({
       colors = { bg = "#000000" },
+      overrides = {
+        CursorLine = {
+          bg = "#1a1a1a",
+        },
+      },
     })
     vim.cmd("colorscheme dracula")
   end
