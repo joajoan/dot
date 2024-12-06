@@ -38,6 +38,12 @@ return {
     vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
     vim.keymap.set("n", "<leader>fs", builtin.git_files, {})
     vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-    vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
+    vim.keymap.set("n", "<leader>fb", function()
+      builtin.buffers({
+        ignore_current_buffer = true,
+        sort_lastused = true,
+        sort_mru = true,
+      })
+    end, {})
   end
 }
