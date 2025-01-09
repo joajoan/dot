@@ -13,7 +13,7 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 
 shopt -s cdable_vars
-export git="$HOME/Git"
-export dot="$git/dot"
 export doc="$HOME/Documents"
 export dl="$HOME/Downloads"
+export git="$HOME/Git"
+export dot="$git/dot"
