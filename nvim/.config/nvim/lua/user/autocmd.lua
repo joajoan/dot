@@ -43,3 +43,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end,
 })
+
+-- Set commentstring for SQL files.
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "sql",
+  callback = function()
+    vim.bo.commentstring = "-- %s"
+  end,
+})
