@@ -1,0 +1,20 @@
+# Enable color support
+export COLORTERM=truecolor
+
+# Add NVIM to PATH
+if [ -d "/opt/nvim-linux64/bin" ] && [[ ":$PATH:" != *":/opt/nvim-linux64/bin:"* ]]; then
+    export PATH="/opt/nvim-linux64/bin:$PATH"
+fi
+
+# Configure Cargo and Rust
+if [ -f "$HOME/.cargo/env" ]; then
+    source "$HOME/.cargo/env"
+fi
+if [ -d "$HOME/.cargo/bin" ] && [[ ":$PATH:" != *":$HOME/.cargo/bin:"* ]]; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+# Add local bin directory
+if [ -d "$HOME/.local/bin" ] && [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
