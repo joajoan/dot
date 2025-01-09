@@ -1,3 +1,8 @@
+# Load shell-agnostic profile
+if [ -f ~/.shell_profile ]; then
+    source ~/.shell_profile
+fi
+
 # Loading shell configuration
 if [ -f ~/.bashrc ]; then
     source ~/.bashrc
