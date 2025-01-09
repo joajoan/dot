@@ -6,7 +6,7 @@ return {
       default_config = {
         cmd = { "sqruff", "lsp" },
         filetypes = { "sql" },
-        root_dir = lspconfig.util.root_pattern(".sqruff") or vim.fn.getcwd(),
+        root_dir = lspconfig.util.root_pattern(".sqruff") or vim.fs.root(),
         settings = {},
       },
     }
