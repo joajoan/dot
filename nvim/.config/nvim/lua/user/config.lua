@@ -73,3 +73,15 @@ vim.g.omni_sql_no_default_maps = true
 
 -- Add cursor-line.
 vim.opt.cursorline = true
+
+-- Specify file-types for target files.
+vim.filetype.add({
+  filename = {
+    ['.shellrc'] = 'sh',
+    ['.zprofile'] = 'zsh'
+  },
+  pattern = {
+    ['.*%.shell_[a-z_]+'] = 'sh',
+    ['.*%.zsh[a-z_]+'] = 'zsh',
+  },
+})
