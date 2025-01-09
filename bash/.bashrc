@@ -76,3 +76,6 @@ fi
 if [ -s "$HOME/.nvm/bash_completion" ]; then
     source "$HOME/.nvm/bash_completion"
 fi
+
+# Launch Starship prompt
+eval "$(starship init bash)"
