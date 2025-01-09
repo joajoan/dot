@@ -1,0 +1,47 @@
+format = """
+[](fg:#3de467)\
+$username\
+[@](bold fg:#000000 bg:#3de467)\
+$hostname\
+[ ](fg:#3de467 bg:#7e58c4)\
+$directory\
+[](fg:#7e58c4)\
+(\
+[\b ](fg:#7e58c4 bg:#262626)\
+$git_branch\
+$git_status\
+[](fg:#262626)\
+)\
+$character\
+"""
+add_newline = false
+
+[username]
+format = "[$user]($style)"
+style_user = "bold fg:#000000 bg:#3de467"
+style_root = "bold fg:#000000 bg:#3de467"
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "[$ssh_symbol$hostname](bold fg:#000000 bg:#3de467)"
+
+[directory]
+format = "[$path]($style)"
+style = "bold fg:#000000 bg:#7e58c4"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+
+[git_branch]
+format = "[ $branch]($style)"
+style = "fg:#FFFFFF bg:#262626"
+
+[git_status]
+format = "[( $all_status$ahead_behind)]($style)"
+style = "fg:#FFFFFF bg:#262626"
