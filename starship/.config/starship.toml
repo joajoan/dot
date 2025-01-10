@@ -14,6 +14,7 @@ $git_status\
 )\
 $character\
 """
+right_format = "$python"
 add_newline = false
 
 [character]
@@ -49,3 +50,11 @@ symbol = ""
 [git_status]
 format = "[( $all_status$ahead_behind)]($style)"
 style = "fg:#FFFFFF bg:#262626"
+
+[python]
+format = "[$symbol]($style)"
+style = "bold fg:#3572A5"
+python_binary = []
+detect_files = []
+detect_extensions = []
+symbol = ""
