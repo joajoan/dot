@@ -5,16 +5,19 @@ $username\
 $hostname\
 [ ](fg:#3de467 bg:#7e58c4)\
 $directory\
-[](fg:#7e58c4)\
+[ ](fg:#7e58c4)\
 (\
-[\b ](fg:#7e58c4 bg:#262626)\
+[](fg:#262626)\
 $git_branch\
 $git_status\
-[](fg:#262626)\
+[ ](fg:#262626)\
 )\
 $character\
 """
 add_newline = false
+
+[character]
+format = "$symbol "
 
 [username]
 format = "[$user]($style)"
@@ -39,8 +42,9 @@ truncation_symbol = "…/"
 "Pictures" = ""
 
 [git_branch]
-format = "[ $branch]($style)"
+format = "[$symbol $branch]($style)"
 style = "fg:#FFFFFF bg:#262626"
+symbol = ""
 
 [git_status]
 format = "[( $all_status$ahead_behind)]($style)"
