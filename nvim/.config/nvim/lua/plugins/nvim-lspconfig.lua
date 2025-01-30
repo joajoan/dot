@@ -29,5 +29,6 @@ return {
       },
     })
     lspconfig.sqruff.setup({})
+    lspconfig.ts_ls.setup({})
   end,
 }
