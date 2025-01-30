@@ -13,5 +13,15 @@ PROMPT='%B%F{green}%n@%m%f%b:%B%F{blue}%~%f%b$ '
 setopt EXTENDED_GLOB
 setopt NO_NOMATCH
 
+# Configure history
+setopt APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_VERIFY
+setopt SHARE_HISTORY
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
 # Launch Starship prompt
 eval "$(starship init zsh)"
