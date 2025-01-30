@@ -23,5 +23,9 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
+# Enable completion
+autoload -U compinit
+compinit
+
 # Launch Starship prompt
 eval "$(starship init zsh)"
