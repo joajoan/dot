@@ -32,5 +32,5 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 vim.keymap.set({"i", "n"}, "<C-c>", "<Esc>")
 
 -- Insert new line without mode change.
-vim.api.nvim_set_keymap('n', 'o', 'o<Esc>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'O', 'O<Esc>', { noremap = true, silent = true })
+vim.keymap.set('n', 'o', 'o<Esc>', { silent = true })
+vim.keymap.set('n', 'O', 'O<Esc>', { silent = true })
