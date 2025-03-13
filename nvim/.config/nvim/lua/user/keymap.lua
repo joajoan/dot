@@ -1,19 +1,11 @@
 -- Disable non-interactive execution.
 vim.keymap.set("n", "Q", "<nop>")
 
--- Center on navigation.
- vim.keymap.set("n", "<C-f>", "<C-f>zz")
- vim.keymap.set("n", "<C-d>", "<C-d>zz")
-
 -- Move visual selection on navigation.
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "H", "<gv")
 vim.keymap.set("v", "L", ">gv")
-
--- Center on next word.
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
 
 -- Restart LSP.
 vim.keymap.set("n", "<leader>rs", "<cmd>LspRestart<cr>")
