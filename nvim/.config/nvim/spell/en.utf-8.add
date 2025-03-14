@@ -38,3 +38,5 @@ Attrs
 timestamp
 Mediatool
 preprocess
+lemmatization
+vectorizer
