@@ -40,3 +40,10 @@ Mediatool
 preprocess
 lemmatization
 vectorizer
+embedder
+pre
+separator
+serializable
+hashable
+tradable
+Idempotently
