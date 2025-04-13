@@ -1,17 +1,21 @@
 [alias]
-	a = add
-	b = branch
-	c = commit
+    a = add
+    b = branch
+    c = commit
     co = checkout
     d = diff
-	st = status
-	r = rebase
-	wt = worktree
+    st = status
+    r = rebase
+    wt = worktree
 [push]
-	default = current
+    default = current
 [core]
-	editor = nvim -f
+    editor = nvim -f
 [pull]
-	rebase = true
+    rebase = true
 [init]
-	defaultBranch = master
+    defaultBranch = master
+[diff]
+    tool = nvimdiff
+[merge]
+    tool = nvimdiff
