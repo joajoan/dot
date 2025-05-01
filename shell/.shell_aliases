@@ -6,6 +6,7 @@ alias fd=fdfind
 # Databricks
 alias dbs=databricks
 alias dab="databricks bundle"
+alias dbfs="databricks fs"
 
 # System.
 alias sudo="sudo env PATH=$PATH"
