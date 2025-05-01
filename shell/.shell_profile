@@ -6,6 +6,7 @@ append () { [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && export PATH="$1:$PATH"
 append "/opt/nvim-linux64/bin"
 append "$HOME/.cargo/bin"
 append "$HOME/.local/bin"
+append "$HOME/.local/lib/flutter/bin"
 
 # Configure Cargo
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
