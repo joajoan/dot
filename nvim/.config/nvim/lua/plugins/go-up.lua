@@ -1,5 +1,6 @@
 return {
   "nullromo/go-up.nvim",
+  event = "VeryLazy",
   opts = {
     respectSplitkeep = true,
     respectScrolloff = true,
