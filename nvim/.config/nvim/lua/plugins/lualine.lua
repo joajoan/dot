@@ -50,6 +50,7 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
+  lazy = false,
   config = function()
     local colors = create_colors()
     local theme = create_theme(colors)
