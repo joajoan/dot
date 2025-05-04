@@ -7,6 +7,7 @@ append "/opt/nvim-linux64/bin"
 append "$HOME/.cargo/bin"
 append "$HOME/.local/bin"
 append "$HOME/.local/lib/flutter/bin"
+append "$HOME/.local/lib/lua-language-server/bin"
 
 # Configure Cargo
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
