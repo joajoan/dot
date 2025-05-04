@@ -18,5 +18,13 @@ return {
     vim.keymap.set({"n", "v"}, "G", "G<Cmd>CenterScreen<CR>")
     vim.keymap.set("n", "n", "n<Cmd>CenterScreen<CR>zv")
     vim.keymap.set("n", "N", "N<Cmd>CenterScreen<CR>zv")
+    vim.keymap.set("c", "<CR>", function()
+      local cmdtype = vim.fn.getcmdtype()
+      if cmdtype == "/" or cmdtype == "?" then
+        return "<CR><Cmd>CenterScreen<CR>"
+      else
+        return "<CR>"
+      end
+    end, { expr = true })
   end,
 }
