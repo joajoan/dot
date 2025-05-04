@@ -1,12 +1,8 @@
 # Load shell-agnostic profile
-if [ -f ~/.shell_profile ]; then
-    source ~/.shell_profile
-fi
+[ -f ~/.shell_profile ] && source ~/.shell_profile
 
 # Loading shell configuration
-if [ -f ~/.bashrc ]; then
-    source ~/.bashrc
-fi
+[ -f ~/.bashrc ] && source ~/.bashrc
 
 # Add directory shortcuts
 shopt -s cdable_vars

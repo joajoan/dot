@@ -5,9 +5,7 @@ case $- in
 esac
 
 # Load shell-agnostic configuration
-if [ -f ~/.shellrc ]; then
-    source ~/.shellrc
-fi
+[ -f ~/.shellrc ] && source ~/.shellrc
 
 # Configure history
 HISTCONTROL=ignoreboth
@@ -73,9 +71,7 @@ if ! shopt -oq posix; then
 fi
 
 # Enable NVM Bash completion
-if [ -s "$HOME/.nvm/bash_completion" ]; then
-    source "$HOME/.nvm/bash_completion"
-fi
+[ -s "$HOME/.nvm/bash_completion" ] && source "$HOME/.nvm/bash_completion"
 
 # Launch Starship prompt
 eval "$(starship init bash)"
