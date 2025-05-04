@@ -1,9 +1,5 @@
 # Loading shell-agnostic profile
-if [ -f ~/.shell_profile ]; then
-    source ~/.shell_profile
-fi
+[ -f ~/.shell_profile ] && source ~/.shell_profile
 
 # Loading shell configuration
-if [ -f  ~/.zshrc ]; then
-    source ~/.zshrc
-fi
+[ -f  ~/.zshrc ] && source ~/.zshrc

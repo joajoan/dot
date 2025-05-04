@@ -1,7 +1,5 @@
 # Load shell-agnostic configuration
-if [ -f ~/.shellrc ]; then
-    source ~/.shellrc
-fi
+[ -f ~/.shellrc ] && source ~/.shellrc
 
 # Enable color support
 export TERM="xterm-256color"
