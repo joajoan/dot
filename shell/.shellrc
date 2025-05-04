@@ -1,7 +1,5 @@
 # Load shell-agnostic aliases
-if [ -f ~/.shell_aliases ]; then
-    source ~/.shell_aliases
-fi
+[ -f ~/.shell_aliases ] && source ~/.shell_aliases
 
 # Enable directory color support
 if [ -x /usr/bin/dircolors ]; then
@@ -11,6 +9,4 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Configure NVM
-if [ -s "$HOME/.nvm/nvm.sh" ]; then
-    source "$HOME/.nvm/nvm.sh"
-fi
+[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
