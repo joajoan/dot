@@ -30,5 +30,8 @@ hash -d docs=~/Documents
 hash -d dl=~/Downloads
 hash -d git=~/Git
 
+# Enable VI commands
+set -o vi
+
 # Launch Starship prompt
 eval "$(starship init zsh)"
