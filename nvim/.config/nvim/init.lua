@@ -19,4 +19,5 @@ require('lazy').setup('plugins', {
     border = 'rounded',
     title = ' Lazy ',
   },
+  change_detection = { notify = false },
 })
