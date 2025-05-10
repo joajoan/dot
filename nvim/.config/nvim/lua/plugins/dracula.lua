@@ -1,8 +1,7 @@
 return {
   "Mofiqul/dracula.nvim",
   name = "dracula",
-  lazy = false,
-  priority = 1000,
+  event = "UIEnter",
   opts = {
     colors = { bg = "#000000" },
     overrides = {

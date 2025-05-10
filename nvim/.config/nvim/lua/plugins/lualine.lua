@@ -50,7 +50,7 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
-  lazy = false,
+  event = "UIEnter",
   config = function()
     local colors = create_colors()
     local theme = create_theme(colors)
