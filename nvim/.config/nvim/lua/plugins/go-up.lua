@@ -1,6 +1,6 @@
 return {
   "nullromo/go-up.nvim",
-  event = "VeryLazy",
+  event = { "BufNewFile", "BufReadPost" },
   opts = {
     respectSplitkeep = true,
     respectScrolloff = true,
