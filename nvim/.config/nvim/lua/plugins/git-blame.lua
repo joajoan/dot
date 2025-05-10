@@ -1,6 +1,6 @@
 return {
   "f-person/git-blame.nvim",
-  event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+  event = { "BufNewFile", "BufReadPost" },
   opts = {
     date_format = "%m-%d-%Y %H:%M:%S",
     delay = 0,

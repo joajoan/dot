@@ -4,7 +4,7 @@ return {
     "nvim-treesitter/nvim-treesitter-context",
     "nvim-treesitter/nvim-treesitter-textobjects",
   },
-  event = { "BufReadPost", "BufWritePost", "BufNewFile", "VeryLazy" },
+  event = { "BufNewFile", "BufReadPost" },
   build = ":TSUpdate",
   config = function()
     require("nvim-treesitter.configs").setup({
