@@ -47,3 +47,4 @@ serializable
 hashable
 tradable
 Idempotently
+tiggered
