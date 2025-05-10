@@ -11,8 +11,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('user')
+vim.cmd("silent! colorscheme dracula")
 
+require('user')
 require('lazy').setup('plugins', {
   ui = {
     border = 'rounded',
