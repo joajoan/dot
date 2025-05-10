@@ -71,9 +71,6 @@ end
 -- Disable OmniSQL default mappings.
 vim.g.omni_sql_no_default_maps = true
 
--- Add cursor-line.
-vim.opt.cursorline = true
-
 -- Specify file-types for target files.
 vim.filetype.add({
   filename = {
