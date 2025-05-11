@@ -4,9 +4,6 @@ case $- in
       *) return;;
 esac
 
-# Load shell-agnostic configuration
-[ -f ~/.shellrc ] && source ~/.shellrc
-
 # Configure history
 HISTCONTROL=ignoreboth
 shopt -s histappend
@@ -69,6 +66,10 @@ if ! shopt -oq posix; then
     source /etc/bash_completion
   fi
 fi
+
+# Load shell-agnostic configuration
+[ -f ~/.shell_profile ] && source ~/.shell_profile
+[ -f ~/.shellrc ] && source ~/.shellrc
 
 # Enable NVM Bash completion
 [ -s "$HOME/.nvm/bash_completion" ] && source "$HOME/.nvm/bash_completion"
