@@ -1,4 +1,5 @@
 # Load shell-agnostic configuration
+[ -f ~/.shell_profile ] && source ~/.shell_profile
 [ -f ~/.shellrc ] && source ~/.shellrc
 
 # Enable color support
