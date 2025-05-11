@@ -2,16 +2,14 @@ return {
   "neovim/nvim-lspconfig",
   event = { "BufNewFile", "BufReadPost" },
   config = function()
-    local lspconfig = require("lspconfig")
-    require("lspconfig.configs").sqruff = {
-      default_config = {
-        cmd = { "sqruff", "lsp" },
-        filetypes = { "sql" },
-        root_dir = lspconfig.util.root_pattern(".sqruff") or vim.fs.root(),
-        settings = {},
-      },
-    }
-    lspconfig.lua_ls.setup({
+    vim.lsp.enable({
+      "lua_ls",
+      "pyright",
+      "sqruff",
+      "ts_ls",
+      "ruff",
+    })
+    vim.lsp.config("lua_ls", {
       settings = {
         Lua = {
           diagnostics = {
@@ -20,8 +18,7 @@ return {
         }
       }
     })
-    lspconfig.ruff.setup({})
-    lspconfig.pyright.setup({
+    vim.lsp.config("pyright", {
       settings = {
         pyright = { disableOrganizeImports = true },
         python = {
@@ -29,7 +26,5 @@ return {
         }
       },
     })
-    lspconfig.sqruff.setup({})
-    lspconfig.ts_ls.setup({})
   end,
 }
