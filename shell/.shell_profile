@@ -1,6 +1,3 @@
-# Enable color support
-export COLORTERM=truecolor
-
 # Safely prepend PATH
 prepend () { [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && export PATH="$1:$PATH"; }
 prepend "$HOME/.cargo/bin"
