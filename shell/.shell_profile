@@ -1,13 +1,10 @@
 # Enable color support
 export COLORTERM=truecolor
 
-# Safely append PATH
-append () { [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && export PATH="$1:$PATH"; }
-append "/opt/nvim-linux64/bin"
-append "$HOME/.cargo/bin"
-append "$HOME/.local/bin"
-append "$HOME/.local/lib/flutter/bin"
-append "$HOME/.local/lib/lua-language-server/bin"
+# Safely prepend PATH
+prepend () { [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && export PATH="$1:$PATH"; }
+prepend "$HOME/.cargo/bin"
+prepend "$HOME/.local/bin"
 
 # Configure Cargo
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
