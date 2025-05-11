@@ -27,7 +27,7 @@ autoload -U compinit
 compinit
 
 # Add named directories
-hash -d docs=~/Documents
+hash -d doc=~/Documents
 hash -d dl=~/Downloads
 hash -d git=~/Git
 
