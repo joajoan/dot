@@ -34,3 +34,11 @@ vim.keymap.set({"i", "n"}, "<C-c>", "<Esc>")
 -- Insert new line without mode change.
 vim.keymap.set('n', 'o', 'o<Esc>', { silent = true })
 vim.keymap.set('n', 'O', 'O<Esc>', { silent = true })
+
+-- Center on cursor when navigating.
+vim.keymap.set({"n", "v"}, "<C-f>", "<C-f>zz", { remap = true })
+vim.keymap.set({"n", "v"}, "<C-b>", "<C-b>zz", { remap = true })
+vim.keymap.set({"n", "v"}, "<C-u>", "<C-u>zz", { remap = true })
+vim.keymap.set({"n", "v"}, "<C-d>", "<C-d>zz", { remap = true })
+vim.keymap.set({"n", "v"}, "gg", "ggzt", { remap = true })
+vim.keymap.set({"n", "v"}, "G", "Gzb", { remap = true })
