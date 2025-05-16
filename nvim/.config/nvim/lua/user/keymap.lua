@@ -42,3 +42,15 @@ vim.keymap.set({"n", "v"}, "<C-u>", "<C-u>zz", { remap = true })
 vim.keymap.set({"n", "v"}, "<C-d>", "<C-d>zz", { remap = true })
 vim.keymap.set({"n", "v"}, "gg", "ggzt", { remap = true })
 vim.keymap.set({"n", "v"}, "G", "Gzb", { remap = true })
+
+-- Center on cursor when searching.
+vim.keymap.set("n", "n", "nzzzv", { remap = true })
+vim.keymap.set("n", "N", "Nzzzv", { remap = true })
+vim.keymap.set("c", "<CR>", function()
+  local cmdtype = vim.fn.getcmdtype()
+  if cmdtype == "/" or cmdtype == "?" then
+    return "<CR>zzzv"
+  else
+    return "<CR>"
+  end
+end, { expr = true, remap = true })
