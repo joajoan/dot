@@ -11,6 +11,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
 fi
 
+# Specify super-user editor
+export SUDO_EDITOR=nvim
+
 # Specify default editor
-export EDITOR=nvim
+export EDITOR="$EDITOR"
 export VISUAL="$EDITOR"
