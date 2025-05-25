@@ -1,6 +1,7 @@
 -- Strip trailing white-spaces.
 vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*", command = [[%s/\s\+$//e]],
+  pattern = "*",
+  command = [[%s/\s\+$//e]],
 })
 
 -- Highlight on yank.
@@ -44,7 +45,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
--- Set commentstring for SQL files.
+-- Set comment string for SQL files.
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "sql",
   callback = function()
