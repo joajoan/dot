@@ -1,5 +1,5 @@
 -- Leader key.
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 -- Line numbering.
 vim.opt.nu = true
@@ -18,7 +18,7 @@ vim.opt.wrap = false
 -- Improve undo experience.
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 -- Search settings.
@@ -35,17 +35,17 @@ vim.opt.scrolloff = 8
 vim.opt.updatetime = 100
 
 -- Always show signs.
-vim.opt.signcolumn = 'number'
+vim.opt.signcolumn = "number"
 
 -- Enable special filename characters.
-vim.opt.isfname:append('@-@')
+vim.opt.isfname:append("@-@")
 
 -- Hide mode indicator.
 vim.opt.showmode = false
 
 -- Enable spelling.
 vim.opt.spell = true
-vim.opt.spelllang = {'en_us', 'sv'}
+vim.opt.spelllang = {"en_us", "sv"}
 
 -- Built-in file browser.
 vim.g.netrw_browse_split = 0
@@ -74,11 +74,11 @@ vim.g.omni_sql_no_default_maps = true
 -- Specify file-types for target files.
 vim.filetype.add({
   filename = {
-    ['.shellrc'] = 'sh',
-    ['.zprofile'] = 'zsh'
+    [".shellrc"] = "sh",
+    [".zprofile"] = "zsh"
   },
   pattern = {
-    ['.*%.shell_[a-z_]+'] = 'sh',
-    ['.*%.zsh[a-z_]+'] = 'zsh',
+    [".*%.shell_[a-z_]+"] = "sh",
+    [".*%.zsh[a-z_]+"] = "zsh",
   },
 })

@@ -4,19 +4,19 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 -- Highlight on yank.
-vim.api.nvim_create_autocmd('TextYankPost', {
-  pattern = '*',
+vim.api.nvim_create_autocmd("TextYankPost", {
+  pattern = "*",
   callback = function()
     vim.highlight.on_yank({
-      higroup = 'IncSearch',
+      higroup = "IncSearch",
       timeout = 40,
     })
   end,
 })
 
 -- Create LSP-based shortcuts.
-vim.api.nvim_create_autocmd('LspAttach', {
-  group = vim.api.nvim_create_augroup('UserKeymap', { clear = true }),
+vim.api.nvim_create_autocmd("LspAttach", {
+  group = vim.api.nvim_create_augroup("UserKeymap", { clear = true }),
   callback = function(event)
     local opts = { buffer = event.buf }
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
@@ -32,13 +32,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 -- Disable hover capability from Ruff.
 vim.api.nvim_create_autocmd("LspAttach", {
-  group = vim.api.nvim_create_augroup('RuffLsp', { clear = true }),
+  group = vim.api.nvim_create_augroup("RuffLsp", { clear = true }),
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
     if client == nil then
       return
     end
-    if client.name == 'ruff' then
+    if client.name == "ruff" then
       client.server_capabilities.hoverProvider = false
     end
   end,
