@@ -1,3 +1,4 @@
+
 -- Disable non-interactive execution.
 vim.keymap.set("n", "Q", "<nop>")
 
@@ -32,8 +33,8 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 vim.keymap.set({"i", "n"}, "<C-c>", "<Esc>")
 
 -- Insert new line without mode change.
-vim.keymap.set("n", "o", "o<Esc>", { silent = true })
-vim.keymap.set("n", "O", "O<Esc>", { silent = true })
+vim.keymap.set("n", "o", "o<Esc>", { remap = true })
+vim.keymap.set("n", "O", "O<Esc>", { remap = true })
 
 -- Center on cursor when navigating.
 vim.keymap.set({"n", "v"}, "<C-f>", "<C-f>zz", { remap = true })
