@@ -32,25 +32,5 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 vim.keymap.set({"i", "n"}, "<C-c>", "<Esc>")
 
 -- Insert new line without mode change.
-vim.keymap.set("n", "o", "o<Esc>", { remap = true })
-vim.keymap.set("n", "O", "O<Esc>", { remap = true })
-
--- Center on cursor when navigating.
-vim.keymap.set({"n", "v"}, "<C-f>", "<C-f>zz", { remap = true })
-vim.keymap.set({"n", "v"}, "<C-b>", "<C-b>zz", { remap = true })
-vim.keymap.set({"n", "v"}, "<C-u>", "<C-u>zz", { remap = true })
-vim.keymap.set({"n", "v"}, "<C-d>", "<C-d>zz", { remap = true })
-vim.keymap.set({"n", "v"}, "gg", "ggzt", { remap = true })
-vim.keymap.set({"n", "v"}, "G", "Gzb", { remap = true })
-
--- Center on cursor when searching.
-vim.keymap.set("n", "n", "nzzzv", { remap = true })
-vim.keymap.set("n", "N", "Nzzzv", { remap = true })
-vim.keymap.set("c", "<CR>", function()
-  local cmdtype = vim.fn.getcmdtype()
-  if cmdtype == "/" or cmdtype == "?" then
-    return "<CR>zzzv"
-  else
-    return "<CR>"
-  end
-end, { expr = true, remap = true })
+vim.keymap.set("n", "o", "o<Esc>")
+vim.keymap.set("n", "O", "O<Esc>")
