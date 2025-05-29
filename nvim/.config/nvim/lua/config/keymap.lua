@@ -1,4 +1,3 @@
-
 -- Disable non-interactive execution.
 vim.keymap.set("n", "Q", "<nop>")
 
