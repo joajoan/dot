@@ -28,6 +28,14 @@ return {
         sort_lastused = true,
         sort_mru = true,
       },
+      lsp_document_symbols = {
+        ignore_symbols = {
+          "array",
+          "boolean",
+          "object",
+          "string",
+        }
+      },
     },
     extensions = {
       fzf = {
