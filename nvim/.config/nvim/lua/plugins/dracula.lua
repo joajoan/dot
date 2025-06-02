@@ -1,6 +1,7 @@
 return {
   "Mofiqul/dracula.nvim",
   event = "UIEnter",
+  cond = not vim.g.vscode,
   name = "dracula",
   opts = {
     colors = { bg = "#000000" },

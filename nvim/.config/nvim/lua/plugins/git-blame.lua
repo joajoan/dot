@@ -1,6 +1,7 @@
 return {
   "f-person/git-blame.nvim",
   event = { "BufNewFile", "BufReadPost" },
+  cond = not vim.g.vscode,
   opts = {
     date_format = "%Y-%m-%d %H:%M:%S",
     delay = 0,
