@@ -47,6 +47,7 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   event = "UIEnter",
+  cond = not vim.g.vscode,
   opts = {
     options = {
       always_divide_middle = true,

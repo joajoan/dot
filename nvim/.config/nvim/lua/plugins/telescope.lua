@@ -4,6 +4,7 @@ return {
     "nvim-lua/plenary.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
   },
+  cond = not vim.g.vscode,
   keys = {
     { "<leader>ff", "<CMD>Telescope find_files<CR>" },
     { "<leader>fg", "<CMD>Telescope live_grep<CR>" },
