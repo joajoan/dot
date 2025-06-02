@@ -8,6 +8,7 @@ return {
       "sqruff",
       "ts_ls",
       "ruff",
+      "rust_analyzer",
     })
     vim.lsp.config("lua_ls", {
       settings = {
