@@ -1,6 +1,7 @@
 return {
   "RRethy/vim-illuminate",
   event = { "BufNewFile", "BufReadPost" },
+  cond = not vim.g.vscode,
   opts = {
     delay = 480,
     modes_denylist = { "s" },
