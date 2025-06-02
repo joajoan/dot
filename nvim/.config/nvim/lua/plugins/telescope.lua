@@ -9,6 +9,7 @@ return {
     { "<leader>fg", "<CMD>Telescope live_grep<CR>" },
     { "<leader>fb", "<CMD>Telescope buffers<CR>" },
     { "<leader>fd", "<CMD>Telescope diagnostics<CR>" },
+    { "<leader>fs", "<CMD>Telescope lsp_document_symbols <CR>" },
   },
   opts = {
     defaults = {
