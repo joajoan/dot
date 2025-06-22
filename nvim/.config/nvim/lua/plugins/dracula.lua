@@ -6,6 +6,7 @@ return {
     colors = { bg = "#000000" },
     overrides = {
       CursorLine = { bg = "#1a1a1a" },
+      MatchParen = { bg = "#44475A", underline = false },
     },
   },
   config = function(_, opts)
