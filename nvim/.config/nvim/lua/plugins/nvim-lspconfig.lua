@@ -7,6 +7,7 @@ return {
       "pyright",
       "sqruff",
       "ts_ls",
+      "ty",
       "ruff",
       "rust_analyzer",
     })
