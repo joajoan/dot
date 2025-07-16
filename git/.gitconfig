@@ -3,9 +3,13 @@
     b = branch
     c = commit
     co = checkout
+    cp = cherry-pick
     d = diff
     st = status
-    r = rebase
+    sw = switch
+    rb = rebase
+    re = reset
+    rs = restore
     wt = worktree
 [push]
     default = current
