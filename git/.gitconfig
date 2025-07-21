@@ -5,6 +5,7 @@
     co = checkout
     cp = cherry-pick
     d = diff
+    f = fetch
     st = status
     sw = switch
     rb = rebase
