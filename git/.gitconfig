@@ -8,8 +8,8 @@
     f = fetch
     st = status
     sw = switch
+    r = reset
     rb = rebase
-    re = reset
     rs = restore
     wt = worktree
 [push]
