@@ -29,14 +29,6 @@ return {
         sort_mru = true,
       },
       diagnostics = { bufnr = 0 },
-      lsp_document_symbols = {
-        ignore_symbols = {
-          "array",
-          "boolean",
-          "object",
-          "string",
-        }
-      },
     },
     extensions = {
       fzf = {
