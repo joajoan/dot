@@ -28,6 +28,7 @@ return {
         sort_lastused = true,
         sort_mru = true,
       },
+      diagnostics = { bufnr = 0 },
       lsp_document_symbols = {
         ignore_symbols = {
           "array",
