@@ -6,10 +6,7 @@ return {
     vim.api.nvim_set_hl(0, "IlluminatedWordRead", { bg = "#3c3836" })
     vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { bg = "#3c3836" })
   end,
-  opts = {
-    delay = 480,
-    modes_denylist = { "s" },
-  },
+  opts = { delay = 480 },
   config = function(_, opts)
     require("illuminate").configure(opts)
   end,
