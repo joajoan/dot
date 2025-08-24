@@ -28,14 +28,10 @@ return {
         },
       },
     })
-  vim.lsp.config('ty', {
-    init_options = {
+    vim.lsp.config('ty', {
       settings = {
-        python = {
-          ty = { disableLanguageServices = true },
-        },
+        ty = { disableLanguageServices = true },
       },
-    },
-  })
+    })
   end,
 }
