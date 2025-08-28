@@ -6,6 +6,7 @@
     cp = cherry-pick
     d = diff
     f = fetch
+    ls = log --pretty=format:'%C(auto)%h %s%d'
     st = status
     sw = switch
     r = reset
