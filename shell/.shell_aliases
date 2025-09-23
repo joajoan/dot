@@ -4,7 +4,7 @@ alias pip=pip3
 alias fd=fdfind
 
 # Databricks
-alias db=databricks
+alias dbs=databricks
 alias dab="databricks bundle"
 alias dbfs="databricks fs"
 alias dbsql=dbsqlcli
