@@ -12,11 +12,15 @@ PROMPT='%B%F{green}%n@%m%f%b:%B%F{blue}%~%f%b$ '
 setopt EXTENDED_GLOB
 
 # Configure history
-setopt APPEND_HISTORY
-setopt HIST_IGNORE_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
+
+# Configure history file
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -25,6 +29,14 @@ SAVEHIST=10000
 # Enable completion
 autoload -U compinit
 compinit
+
+# Load modules
+zmodload zsh/complist
+
+# Register completion styles
+zstyle ':completion:*' completer _complete _history
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu select
 
 # Add named directories
 hash -d doc=~/Documents
