@@ -46,5 +46,6 @@ return {
         ty = { disableLanguageServices = true },
       },
     })
+    vim.lsp.config("ruff", { on_attach = on_attach })
   end,
 }
