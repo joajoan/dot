@@ -28,7 +28,7 @@ return {
         },
       },
     })
-    vim.lsp.config('ty', {
+    vim.lsp.config("ty", {
       settings = {
         ty = { disableLanguageServices = true },
       },
