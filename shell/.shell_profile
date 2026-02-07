@@ -2,6 +2,7 @@
 prepend () { [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && export PATH="$1:$PATH"; }
 prepend "$HOME/.cargo/bin"
 prepend "$HOME/.local/bin"
+prepend "$HOME/.opencode/bin"
 
 # Configure Cargo
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
