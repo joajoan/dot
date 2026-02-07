@@ -5,7 +5,7 @@ My personal configuration files, managed with GNU Stow.
 A `stow` package is a top-level directory that defines a sub-file system of config files. Any such files placed inside a package are symbolically linked into a given target directory, and any sub-paths are mirrored to preserve structure.
 
 ## Usage
-Run any `stow` command from the repository root. Specify a package `<source>`, that is a sub-directory, to link or process all by using a glob `*`.
+Run any `stow` command from the repository root. Specify a package `<source>`, that is a sub-directory, to link or process all by using the `*/` glob pattern.
 
 ```sh
 stow [OPTIONS] <source>
