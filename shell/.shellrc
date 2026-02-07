@@ -15,5 +15,5 @@ fi
 export SUDO_EDITOR=nvim
 
 # Specify default editor
-export EDITOR="$EDITOR"
-export VISUAL="$EDITOR"
+export EDITOR="${EDITOR:-nvim}"
+export VISUAL="${VISUAL:-$EDITOR}"
