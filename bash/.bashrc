@@ -44,15 +44,6 @@ case "$TERM" in
         ;;
 esac
 
-# Enable color for ls and set aliases
-if [ -x /usr/bin/dircolors ]; then
-    eval "$(dircolors -b ~/.dircolors 2>/dev/null || dircolors -b)"
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
 # Set ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
