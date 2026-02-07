@@ -47,4 +47,4 @@ hash -d git=~/Git
 bindkey -v
 
 # Launch Starship prompt
-eval "$(starship init zsh)"
+command -v starship &> /dev/null && eval "$(starship init zsh)"
