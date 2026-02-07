@@ -36,8 +36,7 @@ zmodload zsh/complist
 
 # Register completion styles
 zstyle ':completion:*' completer _complete _history
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' menu select
+[[ -n "$LS_COLORS" ]] && zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # Add named directories
 hash -d doc=~/Documents
