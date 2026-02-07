@@ -15,7 +15,7 @@ Common options used by me are shown below.
 
 - `-R`: Reapply all symbolic links, that is first remove and then relink.
 - `-D`: Remove the links in the given packages.
-- `-V`: Enable verbose logging. (Useful when debugging and transparency.)
+- `-v`: Enable verbose logging. (Useful when debugging and transparency.)
 - `-n`: Perform a dry run to preview any would-be changes.
 
 *No need for an explicit -t; the default target is ones home directory.*
