@@ -66,4 +66,4 @@ fi
 [ -s "$HOME/.nvm/bash_completion" ] && source "$HOME/.nvm/bash_completion"
 
 # Launch Starship prompt
-eval "$(starship init bash)"
+command -v starship &> /dev/null && eval "$(starship init bash)"
