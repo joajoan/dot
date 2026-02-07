@@ -18,7 +18,7 @@ Common options used by me are shown below.
 - `-v`: Enable verbose logging. (Useful when debugging and transparency.)
 - `-n`: Perform a dry run to preview any would-be changes.
 
-*No need for an explicit -t; the default target is ones home directory.*
+*No need for an explicit `-t`; the default target is your home directory.*
 
 ## Configuration
 A `.stowrc` file sets default `stow` options, which is why the target can be omitted.
