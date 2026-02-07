@@ -65,12 +65,5 @@ fi
 # Enable NVM Bash completion
 [ -s "$HOME/.nvm/bash_completion" ] && source "$HOME/.nvm/bash_completion"
 
-# Add directory shortcuts
-shopt -s cdable_vars
-export doc="$HOME/Documents"
-export dl="$HOME/Downloads"
-export git="$HOME/Git"
-export dot="$git/dot"
-
 # Launch Starship prompt
 eval "$(starship init bash)"
