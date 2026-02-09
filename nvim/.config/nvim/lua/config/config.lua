@@ -85,3 +85,6 @@ vim.filetype.add({
     [".*%.zsh[a-z_]+"] = "zsh",
   },
 })
+
+-- Enable auto-reading.
+vim.opt.autoread = true
