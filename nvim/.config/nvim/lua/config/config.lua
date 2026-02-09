@@ -45,7 +45,7 @@ vim.opt.showmode = false
 
 -- Enable spelling.
 vim.opt.spell = true
-vim.opt.spelllang = {"en_us", "sv"}
+vim.opt.spelllang = { "en_us", "sv" }
 
 -- Built-in file browser.
 vim.g.netrw_browse_split = 0
@@ -54,7 +54,7 @@ vim.g.netrw_winsize = 25
 
 -- Rounded borders.
 vim.diagnostic.config({
-  float = {border = "rounded"},
+  float = { border = "rounded" },
 })
 
 -- Disable startup message.
