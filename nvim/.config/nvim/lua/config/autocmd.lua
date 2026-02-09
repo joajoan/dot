@@ -52,3 +52,12 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.commentstring = "-- %s"
   end,
 })
+
+-- Auto-load buffer on disk change.
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
+  callback = function()
+    if vim.fn.mode() ~= "c" then
+      vim.cmd("checktime")
+    end
+  end,
+})
