@@ -15,7 +15,6 @@ size = 12
 [mouse]
 hide_when_typing = true
 
-[keyboard]
-bindings = [
-  { key = "F11", action = "ToggleFullscreen" }
-]
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
