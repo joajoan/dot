@@ -5,6 +5,10 @@ local function on_attach(_, buffer)
     group = group,
     buffer = buffer,
     callback = function()
+      vim.lsp.buf.code_action({
+        context = { only = { "source.fixAll" } },
+        apply = true,
+      })
       vim.lsp.buf.format({ async = false })
     end
   })
