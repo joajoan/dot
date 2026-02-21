@@ -1,9 +1,9 @@
 local group = vim.api.nvim_create_augroup("LspFormatOnSave", { clear = true })
-local function on_attach(_, buffer)
-  vim.api.nvim_clear_autocmds({ group = group, buffer = buffer })
+local function on_attach(_, bufnr)
+  vim.api.nvim_clear_autocmds({ group = group, buffer = bufnr })
   vim.api.nvim_create_autocmd("BufWritePre", {
     group = group,
-    buffer = buffer,
+    buffer = bufnr,
     callback = function()
       vim.lsp.buf.code_action({
         context = { only = { "source.fixAll" } },
