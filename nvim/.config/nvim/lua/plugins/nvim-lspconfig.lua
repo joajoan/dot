@@ -1,19 +1,3 @@
-local group = vim.api.nvim_create_augroup("LspFormatOnSave", { clear = true })
-local function on_attach(_, bufnr)
-  vim.api.nvim_clear_autocmds({ group = group, buffer = bufnr })
-  vim.api.nvim_create_autocmd("BufWritePre", {
-    group = group,
-    buffer = bufnr,
-    callback = function()
-      vim.lsp.buf.code_action({
-        context = { only = { "source.fixAll" } },
-        apply = true,
-      })
-      vim.lsp.buf.format({ async = false })
-    end
-  })
-end
-
 return {
   "neovim/nvim-lspconfig",
   event = { "BufNewFile", "BufReadPost" },
@@ -27,7 +11,6 @@ return {
       "rust_analyzer",
     })
     vim.lsp.config("lua_ls", {
-      on_attach = on_attach,
       settings = {
         Lua = {
           diagnostics = {
@@ -41,6 +24,5 @@ return {
         ty = { diagnosticMode = "workspace" },
       },
     })
-    vim.lsp.config("ruff", { on_attach = on_attach })
   end,
 }
