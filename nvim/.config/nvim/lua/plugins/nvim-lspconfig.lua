@@ -16,7 +16,6 @@ return {
   config = function()
     vim.lsp.enable({
       "lua_ls",
-      "pyright",
       "sqruff",
       "ts_ls",
       "ruff",
@@ -30,14 +29,6 @@ return {
           diagnostics = {
             globals = { "vim" },
           },
-        },
-      },
-    })
-    vim.lsp.config("pyright", {
-      settings = {
-        pyright = { disableOrganizeImports = true },
-        python = {
-          analysis = { ignore = { "*" } },
         },
       },
     })
