@@ -34,6 +34,7 @@ return {
     })
     vim.lsp.config("ty", {
       settings = {
+        ty = { diagnosticMode = "workspace" },
       },
     })
     vim.lsp.config("ruff", { on_attach = on_attach })
