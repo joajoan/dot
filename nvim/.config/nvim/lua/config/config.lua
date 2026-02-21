@@ -88,3 +88,6 @@ vim.filetype.add({
 
 -- Enable auto-reading.
 vim.opt.autoread = true
+
+-- Reduce semantic token priority.
+vim.hl.priorities.semantic_tokens = 95
