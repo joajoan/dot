@@ -10,6 +10,7 @@ return {
     { "<leader>fb", "<CMD>Telescope buffers<CR>" },
     { "<leader>fd", "<CMD>Telescope diagnostics<CR>" },
     { "<leader>fs", "<CMD>Telescope lsp_document_symbols <CR>" },
+    { "<leader>fc", "<CMD>Telescope git_status <CR>" },
   },
   opts = {
     defaults = {
