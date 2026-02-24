@@ -12,6 +12,7 @@ return {
     vim.api.nvim_set_hl(0, "DelimiterYellow", { fg = "#DEE781" })
   end,
   opts = {
+    priority = { [''] = 110 },
     highlight = {
       "DelimiterRed",
       "DelimiterOrange",
