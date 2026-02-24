@@ -1,6 +1,7 @@
 return {
   "HiPhish/rainbow-delimiters.nvim",
   event = { "BufNewFile", "BufReadPost" },
+  dependencies = { "nvim-treesitter/nvim-treesitter" },
   init = function ()
     vim.api.nvim_set_hl(0, "DelimiterCyan", { fg = "#80D7EA" })
     vim.api.nvim_set_hl(0, "DelimiterPink", { fg = "#EB6FB7" })
