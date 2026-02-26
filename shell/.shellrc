@@ -17,3 +17,8 @@ export SUDO_EDITOR=nvim
 # Specify default editor
 export EDITOR="${EDITOR:-nvim}"
 export VISUAL="${VISUAL:-$EDITOR}"
+
+# Export SSH socket on remote
+if [ -n "$SSH_CONNECTION" ] && [ -S ~/.ssh/auth_sock ]; then
+    export SSH_AUTH_SOCK=~/.ssh/auth_sock
+fi
