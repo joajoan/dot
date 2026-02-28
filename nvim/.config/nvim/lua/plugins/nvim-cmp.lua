@@ -19,7 +19,7 @@ return {
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
       }),
       sources = cmp.config.sources({
-        { name = "nvim_lsp", keyword_length = 0 },
+        { name = "nvim_lsp" },
         { name = "path" },
       }, {
         { name = "buffer" },
