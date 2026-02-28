@@ -20,9 +20,9 @@ return {
       }),
       sources = cmp.config.sources({
         { name = "nvim_lsp", keyword_length = 0 },
+        { name = "path" },
       }, {
         { name = "buffer" },
-        { name = "path" },
       }),
     })
     cmp.setup.cmdline(":", {
