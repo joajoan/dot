@@ -11,12 +11,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+require("scheme").load()
 require("config")
 require("lazy").setup("plugins", {
   change_detection = { notify = false },
-  install = {
-    colorscheme = { "dracula" },
-  },
   ui = {
     border = "rounded",
     title = " Lazy ",
