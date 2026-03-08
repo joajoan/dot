@@ -241,7 +241,7 @@ function G.lsp_legacy(palette)
     LspReferenceRead = { fg = palette.normal.orange },
     LspReferenceWrite = { fg = palette.normal.orange },
     LspCodeLens = { fg = palette.normal.cyan },
-    LspInlayHint = { fg = "#969696", bg = "#2F3146" },
+    LspInlayHint = { fg = palette.ui.comment, bg = palette.ui.panel },
   }
 end
 
