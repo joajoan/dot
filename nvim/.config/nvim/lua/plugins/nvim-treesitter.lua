@@ -14,6 +14,8 @@ return {
       "gitcommit",
       "gitignore",
       "lua",
+      "markdown",
+      "markdown_inline",
       "python",
       "sql",
       "rust",
