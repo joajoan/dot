@@ -5,11 +5,9 @@ return {
     vim.lsp.config("lua_ls", {
       settings = {
         Lua = {
-          diagnostics = {
-            globals = { "vim" },
-          },
+          runtime = { version = "LuaJIT" },
           workspace = {
-            library = vim.api.nvim_get_runtime_file("", true),
+            library = { vim.env.VIMRUNTIME },
             checkThirdParty = false,
           },
         },
