@@ -1,10 +1,5 @@
 local theme = require("scheme.theme").lualine()
 
-local function location()
-  local cursor = vim.api.nvim_win_get_cursor(0)
-  return string.format("%d:%d", cursor[1], cursor[2] + 1)
-end
-
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = {
@@ -27,7 +22,7 @@ return {
       lualine_x = {},
       lualine_y = { "filetype", "progress" },
       lualine_z = {
-        { location, separator = { left = "", right = "" } },
+        { "location", separator = { left = "", right = "" } },
       },
     },
     inactive_sections = {
