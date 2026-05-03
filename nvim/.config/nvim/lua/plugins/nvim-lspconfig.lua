@@ -30,6 +30,7 @@ return {
       "ruff",
       "ty",
       "rust_analyzer",
+      "dartls",
     })
   end,
 }
