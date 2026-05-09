@@ -245,6 +245,32 @@ function G.lsp_legacy(palette)
   }
 end
 
+---fzf-lua plugin highlight groups.
+---@param palette SchemePalette
+---@return SchemeHighlightTable
+function G.fzf_lua(palette)
+  return {
+    FzfLuaNormal = { fg = palette.primary.fg, bg = palette.primary.bg },
+    FzfLuaBorder = { fg = palette.ui.comment, bg = palette.primary.bg },
+    FzfLuaTitle = { fg = palette.normal.purple, bg = palette.primary.bg },
+    FzfLuaPreviewNormal = { fg = palette.primary.fg, bg = palette.primary.bg },
+    FzfLuaPreviewBorder = { fg = palette.ui.comment, bg = palette.primary.bg },
+    FzfLuaPreviewTitle = { fg = palette.normal.cyan, bg = palette.primary.bg },
+    FzfLuaCursor = { fg = palette.normal.white, bg = palette.ui.selection },
+    FzfLuaCursorLine = { bg = palette.ui.selection },
+    FzfLuaCursorLineNr = { fg = palette.normal.purple, bg = palette.ui.selection },
+    FzfLuaFzfMatch = { fg = palette.normal.green },
+    FzfLuaFzfPrompt = { fg = palette.normal.purple },
+    FzfLuaFzfPointer = { fg = palette.normal.purple },
+    FzfLuaFzfMarker = { fg = palette.normal.purple },
+    FzfLuaPathLineNr = { fg = palette.ui.comment },
+    FzfLuaPathColNr = { fg = palette.ui.comment },
+    FzfLuaBufNr = { fg = palette.normal.cyan },
+    FzfLuaBufFlagCur = { fg = palette.normal.purple },
+    FzfLuaBufFlagAlt = { fg = palette.normal.cyan },
+  }
+end
+
 ---Highlight groups for the nvim-cmp plugin.
 ---@param palette SchemePalette
 ---@return SchemeHighlightTable
@@ -307,6 +333,7 @@ local builders = {
   G.diagnostics,
   G.lsp_legacy,
   G.treesitter,
+  G.fzf_lua,
   G.cmp,
   G.rainbow_delimiters,
 }
