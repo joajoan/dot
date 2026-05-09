@@ -245,25 +245,6 @@ function G.lsp_legacy(palette)
   }
 end
 
----Telescope plugin highlight groups.
----@param palette SchemePalette
----@return SchemeHighlightTable
-function G.telescope(palette)
-  return {
-    TelescopePromptBorder = { fg = palette.ui.comment },
-    TelescopeResultsBorder = { fg = palette.ui.comment },
-    TelescopePreviewBorder = { fg = palette.ui.comment },
-    TelescopeSelection = { fg = palette.normal.white, bg = palette.ui.selection },
-    TelescopeMultiSelection = { fg = palette.normal.purple, bg = palette.ui.selection },
-    TelescopeNormal = { fg = palette.primary.fg, bg = palette.primary.bg },
-    TelescopeMatching = { fg = palette.normal.green },
-    TelescopePromptPrefix = { fg = palette.normal.purple },
-    TelescopeResultsDiffDelete = { fg = palette.normal.red },
-    TelescopeResultsDiffChange = { fg = palette.normal.cyan },
-    TelescopeResultsDiffAdd = { fg = palette.normal.green },
-  }
-end
-
 ---Highlight groups for the nvim-cmp plugin.
 ---@param palette SchemePalette
 ---@return SchemeHighlightTable
@@ -326,7 +307,6 @@ local builders = {
   G.diagnostics,
   G.lsp_legacy,
   G.treesitter,
-  G.telescope,
   G.cmp,
   G.rainbow_delimiters,
 }
