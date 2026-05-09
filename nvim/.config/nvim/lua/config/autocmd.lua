@@ -15,6 +15,17 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+-- Recover filetype for buffers loaded outside :edit's codepath.
+vim.api.nvim_create_autocmd("BufWinEnter", {
+  callback = function(args)
+    if vim.bo[args.buf].filetype == "" then
+      vim.api.nvim_buf_call(args.buf, function()
+        vim.cmd("doautocmd filetypedetect BufRead")
+      end)
+    end
+  end,
+})
+
 -- Create LSP-based shortcuts.
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserKeymap", { clear = true }),
